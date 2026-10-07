@@ -1,0 +1,127 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Grades</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        /*for register section background and font color*/
+        body{
+            display: flex;
+            flex-direction:column;
+            min-height: 100vh;
+            background: #7a99ff;
+            color: #0d093d;
+        }
+      header{
+           background: #283e9e;
+            color:#e0e7ff;
+            text-align: center;
+            padding: 25px 10px;
+        }
+
+        nav{
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            background:#4c2174;
+            padding: 14px;
+            position: sticky;
+            top: 0;
+            z-index: 0;
+        }
+
+        
+        nav a{
+            text-decoration: none;
+            color:#ece2f8;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .container{
+            display: flex;
+            gap: 20px;
+            padding: 25px;
+            flex: 1;
+            max-width: 1100px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        table{
+            width: 100%;
+            border-collapse:collapse;
+            margin-top: 10px;
+        }
+
+        table th, table td{
+            border: 1px, solid #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table th{
+            background: rgb(36, 50, 129);
+            color: white;
+        }
+
+        footer{
+            background: #28309e;
+            color:#8ca1e5;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+            font-weight: 500;
+        }
+
+    </style>  
+
+
+    <header>
+            <h1>Grades</h1>
+        </header> 
+<nav>
+            <a href="Activity2.html">Home</a>
+            <a href="Registration.html">Registration</a>
+            <a href="Grades.html">Grades</a>
+            <a href="Profile.html">Profile</a>
+            </nav>
+
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Subject</th>
+                <th>Instructor</th>
+                <th>Units</th>
+                <th>Grade</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr><td>CS301</td><td>Web Development</td><td>Prof. Agoy-Agoy</td><td>3</td><td>1.25</td><td>Passed</td></tr>
+                <tr><td>CS302</td><td>Database</td><td>Prof. Pangilinan</td><td>3</td><td>1.25</td><td>Passed</td></tr>
+                <tr><td>CS303</td><td>Networking</td><td>Prof. Calilong</td><td>3</td><td>1.25</td><td>Passed</td></tr>
+                <tr><td>CS304</td><td>Operating Systems</td><td>Prof. Casuco</td><td>3</td><td>1.25</td><td>Passed</td></tr>
+        </tbody>
+    </table>
+           
+        
+<footer align="center">
+            <h6>Copyright WebDev@2026 CS31A</h6>
+        </footer>
+        
+    </body>
+
+</html>

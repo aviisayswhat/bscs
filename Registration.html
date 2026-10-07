@@ -1,0 +1,177 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Registration</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        /*for register section background and font color*/
+        body{
+            display: flex;
+            flex-direction:column;
+            min-height: 100vh;
+            background: #152b74;
+            color: #918beb;
+        }
+
+        /* for header background and font color*/
+         header{
+           background: #283e9e;
+            color:#e0e7ff;
+            text-align: center;
+            padding: 25px 10px;
+        }
+
+        nav{
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            background:#4c2174;
+            padding: 14px;
+            position: sticky;
+            top: 0;
+            z-index: 0;
+        }
+
+        nav a{
+            text-decoration: none;
+            color:#9d78c9;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        nav button {
+            background: transparent;
+            color:#5b4099;
+            border: none;
+            padding: 10px 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        nav button.active, nav button.hover{
+            background: #a7a4d4;
+        }
+
+         /*tabs change color when u point it*/
+        nav a:hover{
+            color:#d9c9ff;
+            text-decoration: underline;
+        }
+
+        .container{
+            display: flex;
+            gap: 20px;
+            padding: 25px;
+            flex: 1;
+            max-width: 1100px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        footer{
+            background: #28309e;
+            color:#8ca1e5;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+            font-weight: 500;
+        }
+        
+    </style>
+
+
+
+        <!--header-->
+        <header align="center">
+            <h1>Student Registration Form</h1>
+        </header>
+
+       <nav>
+            <a href="Activity2.html">Home</a>
+            <a href="Registration.html">Registration</a>
+            <a href="Grades.html">Grades</a>
+            <a href="Profile.html">Profile</a>
+       </nav>
+
+    <form>
+        
+        <!--text input-->
+        <h3>Name: <br/></h3>
+        <textarea rows="1"
+        cols="30"
+        name="Name"
+        placeholder="Enter your name..">
+    </textarea><br/><br/>
+      
+        <h3>Student Number: <br/></h3>
+        <textarea rows="1"
+        cols="30"
+        name="Number"
+        placeholder="Enter your number..">
+    </textarea><br/><br/>
+        
+       
+        <h3>Email: <br/></h3>
+        <textarea rows="1"
+        cols="30"
+        name="Email"
+        placeholder="Enter your email..">
+    </textarea><br/><br/>
+
+        <!--radiobox-->
+         <h3>Gender: <br/></h3>
+        <input type = "radio"
+        name="Gender"
+        value="male">Male
+       <input type = "radio"
+        name="Gender"
+        value="female">Female
+       <br/><br/>
+
+       <!--selectbox-->
+       <h3> Course: <br/></h3>
+        <select name="dropdown">
+            <option value="BSCS"selected>BSCS</option>
+            <option value="BSIT"selected>BSIT</option>
+            <option value="BSOAD"selected>BSOAD</option>
+            <option value="BSEntrep"selected>BSEntrep</option>
+            <option value="BECED"selected>BECED</option>
+            <option value="BTLED"selected>BTLED</option>
+            <option value="BSHM"selected>BSHM</option>
+            <option value="BSTM"selected>BSTM</option>
+        </select><br/><br/>
+
+        <!--checkbox-->
+        <h3>Skills: <br/></h3>
+        <input type = "checkbox"
+        name="SKills"
+        value="HTML">HTML
+       <input type = "checkbox"
+        name="Skills"
+        value="CSS">CSS
+        <input type = "checkbox"
+        name="Skills"
+        value="Javascript">Javascript
+       <br/><br/>
+
+       <button type="submit">Submit</button>
+    </form>
+
+       <footer align="center">
+            <h6>Copyright WebDev@2026 CS31A</h6>
+        </footer>
+        
+    </body>
+
+</html>
