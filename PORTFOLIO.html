@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #b4bfff;
+            color: #333333;
+        }
+
+        /* Dark Top Navigation Bar */
+        header {
+            background-color: #47587b;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #3b82f6;
+        }
+
+        /* Hero / Greeting Section */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .hero-text {
+            max-width: 500px;
+        }
+
+        .hero-text h2 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            color: #1f2937;
+            margin-bottom: 12px;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: #4b5563;
+            margin-bottom: 28px;
+        }
+
+        .btn-projects {
+            display: inline-block;
+            background-color: #2563eb;
+            color: #ffffff;
+            padding: 14px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background-color 0.2s;
+        }
+
+        .btn-projects:hover {
+            background-color: #1d4ed8;
+        }
+
+        .hero-img-container {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            border: 4px solid #3b82f6;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .hero-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(2.0) translate(10px, 50px);
+            
+        }
+
+        /* About Section */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #111827;
+            margin-bottom: 20px;
+        }
+
+        .about-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .about-section p {
+            color: #4b5563;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Skills Section with Light Gray Background */
+        .skills-section {
+            background-color: #eabdfa;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .skills-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 30px auto 0;
+        }
+
+        .skill-pill {
+            background-color: #ffffff;
+            padding: 20px 45px;
+            border-radius: 12px;
+            font-weight: bold;
+            color: #1f2937;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            font-size: 1.05rem;
+        }
+
+        /* Activities / Projects Section */
+        .activities-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .activity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .activity-card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+            border: 1px solid #e5e7eb;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        }
+
+        .card-preview {
+            width: 100%;
+            height: 160px;
+            background-color: #e5e7eb;
+            overflow: hidden;
+        }
+
+        .card-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #111827;
+            margin-bottom: 8px;
+        }
+
+        .card-content p {
+            font-size: 0.95rem;
+            color: #6b7280;
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
+
+        .card-content a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+        
+        /* Shorts Grid Layout (Slightly narrower cards for vertical videos) */
+.shorts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 300px));
+    gap: 24px;
+    justify-content: center;
+}
+
+/* Vertical 9:16 Ratio Container */
+.short-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 177.78%; /* 9:16 Vertical Ratio */
+    height: 0;
+    overflow: hidden;
+    background-color: #000000;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.short-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.video-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+        /* Contact Section */
+        .contact-section {
+            margin-top: 80px;
+            background-color: #aec5dc;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        /* Contact Section Alignment */
+.contact-section {
+    background-color: #e4e89d;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.contact-subtext {
+    color: #6b7280;
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+/* Button Container */
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Base Button Styling */
+.btn-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #ffffff;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.btn-contact:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Individual Platform Colors */
+.btn-email {
+    background-color: #2563eb; /* Blue */
+}
+.btn-email:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-yt {
+    background-color: #ff0000; /* Red */
+}
+.btn-yt:hover {
+    background-color: #cc0000;
+}
+
+.btn-fb {
+    background-color: #1877f2; /* Facebook Blue */
+}
+.btn-fb:hover {
+    background-color: #0d65d9;
+}
+
+.btn-instagram {
+    background-color: #5865f2; /* Discord Blurple */
+}
+.btn-instagram:hover {
+    background-color: #4752c4;
+}
+
+        /* Dark Footer */
+        footer {
+            background-color: #111827;
+            color: #ffffff;
+            text-align: center;
+            padding: 24px;
+            font-size: 0.95rem;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                gap: 40px;
+            }
+            .hero-text h2 {
+                font-size: 2.4rem;
+            }
+            nav ul {
+                gap: 12px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!--HTML NA ITO-->
+    <!-- Dark Navigation Header -->
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h2>Hello!</h2>
+            <p>Welcome to my Portfolio in WEBDEV</p>
+            <a href="#projects" class="btn-projects">Projects</a>
+        </div>
+        <div class="hero-img-container">
+            <!-- Replace 'yey.png' with your avatar image file name -->
+            <img src="gacha.png" alt="Profile Avatar">
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
+        <h2 class="section-title">𓏲ּ𝄢°‧⋆About Me⋆‧°𓏲ּ𝄢</h2>
+        <p>
+            I'm Avi! A Computer Science student who enjoys HTML, CSS and JavaScript but also passionates arts and gacha animations! free to check it out thru my Contacts section :]
+        </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <h2 class="section-title">𓏲ּ𝄢°‧⋆My Skills⋆‧°𓏲ּ𝄢</h2>
+        <div class="skills-grid">
+            <div class="skill-pill">HTML</div>
+            <div class="skill-pill">CSS</div>
+            <div class="skill-pill">JavaScript</div>
+            <div class="skill-pill">Digital Drawing</div>
+            <div class="skill-pill">2D / Gacha Animations</div>
+            <div class="skill-pill">Traditional Drawing</div>
+        </div>
+    </section>
+
+    <!-- Projects / Activities Section -->
+    <section id="projects" class="activities-section">
+        <h2 class="section-title">𓏲ּ𝄢°‧⋆Activities⋆‧°𓏲ּ𝄢</h2>
+        
+        <div class="activity-grid">
+            <!-- Laboratory Activity 1 -->
+            <div class="activity-card">
+                <div class="card-preview">
+                    <img src="picture1.png" alt="Lab 4 Preview">
+                </div>
+                <div class="card-content">
+                    <h3>Laboratory Activity 1</h3>
+                    <p>Landing Page</p>
+                    <a href="Activity.html" target="_blank">Lab Activity 1 &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Laboratory Activity 2 -->
+            <div class="activity-card">
+                <div class="card-preview">
+                    <img src="picture2.png" alt="Lab 2 Preview">
+                </div>
+                <div class="card-content">
+                    <h3>Laboratory Activity 2</h3>
+                    <p>My Personal Website</p>
+                    <a href="Activity2.html" target="_blank">Lab Activity 2 &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Laboratory Activity 3-->
+            <div class="activity-card">
+                <div class="card-preview">
+                    <img src="picture4.PNG" alt="Lab 3 Preview">
+                </div>
+                <div class="card-content">
+                    <h3>Laboratory Activity 3</h3>
+                    <p>Interaction Clicks Page</p>
+                    <a href="2profile.html" target="_blank">Lab Activity 3&rarr;</a>
+                </div>
+            </div>
+
+            <!-- Laboratory Activity 4 -->
+             <div class="activity-card">
+                <div class="card-preview">
+                    <img src="picture5.png" alt="Lab 5 Preview">
+                </div>
+                <div class="card-content">
+                    <h3>Laboratory Activity 4</h3>
+                    <p>Loading Page</p>
+                    <a href="Activity4.html" target="_blank">Lab Activity 4&rarr;</a>
+                </div>
+            </div>
+    </section>
+
+    <section class="videos-section">
+    <h2 class="section-title">𓏲ּ𝄢°‧⋆Animations⋆‧°𓏲ּ𝄢</h2>
+
+    <div class="activity-grid">
+        <!-- Video Card 1 -->
+        <div class="activity-card">
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/sNlD7rQQYEw"
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>   
+            </div>
+            <div class="card-content">
+                <h3>Katseye x Gap | Gacha Animation</h3>
+                <p>Most viral animation in this channel.</p>
+                <a href="https://www.youtube.com/shorts/sNlD7rQQYEw" target="_blank" class="card-link">
+                    Watch on YouTube &rarr;
+                </a>
+            </div>
+        </div>
+
+        <!-- Video Card 2 -->
+        <div class="activity-card">
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/wh6aza7DMfI" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="card-content">
+                <h3>Gnarly | Gacha Animation</h3>
+                <p>2nd most viral animation in this channel.</p>
+                <a href="https://www.youtube.com/shorts/wh6aza7DMfI" target="_blank" class="card-link">
+                    Watch on YouTube &rarr;
+                </a>
+            </div>
+        </div>
+
+        <!-- Video Card 3 -->
+        <div class="activity-card">
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/biYTb5ny080" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="card-content">
+                <h3>That one tiktok trend | Suki Daisuki Animation Trend</h3>
+                <p>3rd most viral animation in this channel.</p>
+                <a href="https://www.youtube.com/shorts/biYTb5ny080" target="_blank" class="card-link">
+                    Watch on YouTube &rarr;
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">𓏲ּ𝄢°‧⋆Contacts⋆‧°𓏲ּ𝄢</h2>
+        
+    <div class="contact-buttons">
+        <!-- Email Button -->
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=avchavas@gmail.com" target="_blank" class="btn-contact btn-email">
+            <span>✉️</span> Email Me
+        </a>
+
+        <!-- YouTube Button -->
+        <a href="https://www.youtube.com/@Aaaavii" target="_blank" class="btn-contact btn-yt">
+            <span>▶</span> YouTube
+        </a>
+
+        <!-- Facebook Button -->
+        <a href="https://www.facebook.com/aviilionaire" target="_blank" class="btn-contact btn-fb">
+            <span>f</span> Facebook
+        </a>
+
+        <!-- Instagram Button -->
+        <a href="https://www.instagram.com/aviigeddon/" target="_blank" class="btn-contact btn-instagram">
+            <span>💬</span> Instagram
+        </a>
+    </div>
+</section>
+    </section>
+
+    <!-- Dark Footer -->
+    <footer>
+        <p>© 2026 WEBDEV | BSCS31A</p>
+    </footer>
+
+</body>
+</html>
