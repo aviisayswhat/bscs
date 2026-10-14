@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<!--css-->
+<style>
+    body{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-align: center;
+        margin-top: 45px;
+        background-color: rgb(234, 181, 255);
+    }
+    .card{
+        background-color: rgb(145, 199, 250);
+        margin: auto;
+        border: solid 2px beige;
+        border-radius: 25px;
+        padding: 25px;
+    }
+    button{
+        padding: 15px 20px;
+        background-color:rgb(78, 137, 226) ;
+        border-radius: 25px;
+        border: none;
+    }
+</style>
+
+<!--html-->
+<body>
+    
+    <div class="card">
+        <h1 id="title">Hello!</h1>
+
+        <div align="left" >
+        <h2 id="info">Student information</h2>
+        <p>Name: Avisha Mae Chavas</p>
+        <p id="course">Course: BSIT</p>
+        <p>Year Level: 3rd Year</p>
+</div>
+
+        <button id="btn">Change Title</button>
+        <button id="btn1">Hide Profile</button>
+        <button id="btn2">Show Profile</button>
+
+        <p id="message">Welcome to my interactive profile.</p>
+
+        <br><br>
+
+        <div align="left">
+        <h2>Choose your Course</h2>
+        <select id="course">
+            <option value="BSIT">BSIT</option>
+            <option value="BSCS">BSCS</option>
+            <option value="BSIS">BSIS</option>
+        </select>
+        <p id="message1">Course selection is active.</p></div>
+
+        <br><br>
+
+        <div class="card">
+        <h2>Student List</h2>  
+        <p>Registered Students</p>
+        <table border="2", id="table", align="center">
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Year Level</th>
+            </tr>
+
+             <tr>
+                <td>1</td>
+                <td>Heart</td>
+                <td>BSCS</td>
+                <td>3rd Year</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Erron</td>
+                <td>BSIS</td> 
+                <td>3rd Year</td>
+            </tr>
+
+            
+        </table>
+    </div>
+
+        <button class="btn3">Apply Odd Rows</button>
+        <button class="btn4">Apply Even Rows</button>
+    </div>
+    <script src="activity6.js"></script>
+</body>
+</html>

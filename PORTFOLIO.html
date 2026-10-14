@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Portfolio</title>
     <style>
         /* Reset and Base Styles */
         * {
@@ -84,7 +84,7 @@
 
         .btn-projects {
             display: inline-block;
-            background-color: #2563eb;
+            background-color: #7230a4;
             color: #ffffff;
             padding: 14px 24px;
             border-radius: 8px;
@@ -165,7 +165,72 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
             font-size: 1.05rem;
         }
+        
+        /* Reflection Section Styling */
+    .reflection-section {
+        max-width: 900px;
+        margin: 40px auto 60px auto; /* Margin to separate from header and activity section */
+        border-radius: 15px;
+        text-align: center;
+        color: #333333;
+        background-color:  #e4e89d;
+        padding: 70px 20px;
+    }
 
+    .reflection-card {
+        background-color: #ffffff;
+        border-radius: 16px;
+        padding: 28px 32px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        border: 1px solid #eef0f5;
+        text-align: left;
+        line-height: 1.7;
+        color: #333333;
+        font-size: 1rem;
+    }
+
+    .reflection-card p {
+        margin-bottom: 16px;
+    }
+
+    .reflection-card p:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Container for Sign-off */
+.reflection-signature-container {
+    margin-top: 15px; /* Binawasan mula 30px papuntang 15px */
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* Text "Your fellow BSCS31A Student," */
+.reflection-signature-container .sign-off {
+    margin: 0; /* Tinanggal ang extra space sa ibaba ng text */
+    padding: 0;
+    font-size: 1rem;
+    color: #333333;
+}
+
+/* Signature PNG Image */
+.signature-img {
+    width: 100px; /* Maliit at mas compact na sukat */
+    height: auto;
+    margin: -5px 0 -5px 0; /* Negative margin para mas lumapit sa text sa taas at baba */
+    padding: 0;
+    display: block;
+}
+
+/* Text "Chavas" */
+.reflection-signature-container .student-name {
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin: 0; /* Tinanggal ang extra space sa taas */
+    padding: 0;
+    color: #222222;
+}
         /* Activities / Projects Section */
         .activities-section {
             max-width: 1200px;
@@ -378,7 +443,7 @@
 <!--HTML NA ITO-->
     <!-- Dark Navigation Header -->
     <header>
-        <h1>My Portfolio</h1>
+        <h1>Avi's Portfolio</h1>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -395,7 +460,7 @@
         <div class="hero-text">
             <h2>Hello!</h2>
             <p>Welcome to my Portfolio in WEBDEV</p>
-            <a href="#projects" class="btn-projects">Projects</a>
+            <a href="#projects" class="btn-projects">Projects and Hobbies</a>
         </div>
         <div class="hero-img-container">
             <!-- Replace 'yey.png' with your avatar image file name -->
@@ -422,6 +487,27 @@
             <div class="skill-pill">2D / Gacha Animations</div>
             <div class="skill-pill">Traditional Drawing</div>
         </div>
+    </section>
+
+    <!-- Final Reflection Section -->
+    <section class="reflection-section">
+    <h2 class="section-title">౨˚•.✦ Final Reflection ✦.•˚୧</h2>
+    
+    <div class="reflection-card">
+        <p>
+            Having my subject "Web Development" was an incredible, experimental and rollercoaster of fun learning including HTML, CSS and Javascript.
+            Throughout, I learned how to structure pages with HTML, style responsive layouts using CSS, and bring interactive elements to life with JavaScript. Even though, some of us are having a hard time following his demonstration, he is still understood the assignment for going back demonstrate with us on where we left. Because he believes in no student of him will left behind his lessons. Kudos to you, Sir!
+        </p>
+        <p>
+            It was really fun learning with Sir Ralph, he was truly a hero for teaching these stuffs so well, he teaches us very efficiently and well precise!! And I am really grateful for having him as our WebDev prof. TRULY FOREVER GRATEFUL! I hope he will still our teacher on our 4th year...? Well, I hope so too. :] In our next chapter with you, Sir Ralph. Thank you.
+        </p>
+        <br>
+        <p>
+        Your fellow BSCS31A Student,
+        </p>
+        <img src="signature.png" alt="Signature" class="signature-img">
+        <p>Chavas</p>
+    </div>
     </section>
 
     <!-- Projects / Activities Section -->
@@ -476,6 +562,30 @@
                     <a href="Activity4.html" target="_blank">Lab Activity 4&rarr;</a>
                 </div>
             </div>
+
+            <!-- Laboratory Activity 5-->
+             <div class="activity-card">
+                <div class="card-preview">
+                    <img src="picture6.png" alt="Lab 6 Preview">
+                </div>
+                <div class="card-content">
+                    <h3>Laboratory Activity 5</h3>
+                    <p>Interactive Student Information Page</p>
+                    <a href="activity6.html" target="_blank">Lab Activity 5&rarr;</a>
+                </div>
+                </div>
+
+            <!-- Laboratory Activity 6-->
+             <div class="activity-card">
+                <div class="card-preview">
+                    <img src="picture7.png" alt="Lab 6 Preview">
+                </div>
+                <div class="card-content">
+                    <h3>Laboratory Activity 6</h3>
+                    <p>AJAX Page</p>
+                    <a href="activity7.html" target="_blank">Lab Activity 6&rarr;</a>
+                </div>
+                </div>
     </section>
 
     <section class="videos-section">
