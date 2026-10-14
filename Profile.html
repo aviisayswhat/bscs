@@ -1,0 +1,174 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">  
+        <title>Profile</title>
+    </head>
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        /*background*/
+        body{
+            display: flex;
+            flex-direction:column;
+            min-height: 100vh;
+            background: #8ca1e5;
+            color: #ffffff;
+        }
+
+        /*left side content*/
+        header{
+            background: #283e9e;
+            color:#e0e7ff;
+            text-align: center;
+            padding: 25px 10px;
+        }
+
+        /*header title, my personal web*/
+        header h1{
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        /*header paragraph, welcome to the portal kineme*/
+        header p{
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+         /*tabs: about, register, profile*/
+        nav{
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            background:#4c2174;
+            padding: 14px;
+            position: sticky;
+            top: 0;
+            z-index: 0;
+        }
+
+        .profile{
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .profile img{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #28309e;
+        }
+
+        .profile ul{
+            list-style-type: disc;
+            padding-left: 20px;
+            list-style: 1.8;
+        }
+
+        /*left section bg*/
+        section{
+            flex: 3;
+            background: #08278b;
+            padding: 30px;
+            border-radius: 30px;
+        }
+
+        /*welcome section title*/
+        section h2{
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        /*welcome paragraph*/
+        section p{
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        /*right section bg*/
+        aside{
+            flex: 1;
+            background: #6a3072;
+            padding: 20px;
+            border-radius: 30px;
+        }
+
+        aside h3{
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+
+        aside ul{
+            list-style-type: disc;
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+
+        footer{
+            background: #28309e;
+            color:#8ca1e5;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+            font-weight: 500;
+        }
+        
+    </style>
+
+    <body style = "margin:0;">
+
+
+        <!--header-->
+       <header>
+            <h1>Student Profile</h1>
+        </header> 
+
+        <nav>
+            <a href="Activity2.html">Home</a>
+            <a href="Registration.html">Registration</a>
+            <a href="Grades.html">Grades</a>
+            <a href="Profile.html">Profile</a>
+            </nav>
+
+        <div class="profile">           
+           <img src="pfp.png">
+        </div>
+
+
+           <div style="display: flex;">
+
+        <section>
+            <h3>Avisha Chavas</h3>
+            <ul>
+            <li><b>Course:</b> BSCS</li>
+            <li><b>Section:</b> 31A</li>
+            <li><b>Email:</b> avchavas@gmail.com</li>
+            <li><b>Student ID:</b> PDM-2024-003674</li>
+            <li><b>Status:</b> Regular</li>
+            </ul>
+            
+        </section>
+
+        <aside>
+             <h3>Announcements</h3>
+            <p>Enrollment for BSCS is now open!</p>
+            <p>Grades will be posted never.</p>
+        </aside>
+        </div>
+
+         <footer>
+            <h6>Copyright WebDev@2026 CS31A</h6>
+        </footer>
+        
+    </body>
+
+</html>
