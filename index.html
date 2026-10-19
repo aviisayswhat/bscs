@@ -81,6 +81,16 @@
             color: #4b5563;
             margin-bottom: 28px;
         }
+        
+      #profile-avatar {
+           transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+           opacity: 1;
+        }
+
+        .fade-out {
+        opacity: 0;
+        transform: scale(0.95);
+         }
 
         .btn-projects {
             display: inline-block;
@@ -115,7 +125,7 @@
             height: 100%;
             object-fit: cover;
             transform: scale(2.0) translate(10px, 50px);
-            
+    
         }
 
         /* About Section */
@@ -460,14 +470,14 @@
     <!-- Main Hero Section -->
     <section id="home" class="hero">
         <div class="hero-text">
-            <h2>Hello!</h2>
-            <p>Welcome to my Portfolio in WEBDEV</p>
-            <a href="#activities" class="btn-projects">Projects</a>
-        </div>
-        <div class="hero-img-container">
-            <!-- Replace 'yey.png' with your avatar image file name -->
-            <img src="gacha.png" alt="Profile Avatar">
-        </div>
+                <h2>Hello!</h2>
+        <p>Welcome to my Portfolio in WEBDEV</p>
+        <!-- Ginawa nating button para hindi ka ma-redirect sa #activities -->
+        <button type="button" class="btn-projects" id="magic-btn">Double Click for the Magic</button>
+    </div>
+    <div class="hero-img-container">
+        <img src="gacha.png" alt="Profile Avatar" id="profile-avatar">
+    </div>
     </section>
 
     <!-- About Me Section -->
@@ -498,7 +508,7 @@
     <div class="reflection-card">
         <p>
             Having my subject "Web Development" was an incredible, experimental and rollercoaster of fun learning including HTML, CSS and Javascript.
-            Throughout, I learned how to structure pages with HTML, style responsive layouts using CSS, and bring interactive elements to life with JavaScript. Even though, some of us are having a hard time following his demonstration, he is still understood the assignment for going back demonstrate with us on where we left. Because he believes in no student of him will left behind his lessons. Kudos to you, Sir!
+            Throughout, I learned how to structure pages with HTML, style responsive layouts using CSS, and bring interactive elements to life with JavaScript. One of my favorite activities are Lab Act 3 and 5, because it was really fun coding with a bunch of interactions especially the buttons and transitions, and of course the Javascript feature went really good!  Even though, some of us are having a hard time following his demonstration, he is still understood the assignment for going back demonstrate with us on where we left. Because he believes in no student of him will left behind his lessons. Kudos to you, Sir!
         </p>
         <p>
             It was really fun learning with Sir Ralph, he was truly a hero for teaching these stuffs so well, he teaches us very efficiently and well precise!! And I am really grateful for having him as our WebDev prof. TRULY FOREVER GRATEFUL! I hope he will still our teacher on our 4th year...? Well, I hope so too. :] In our next chapter with you, Sir Ralph. Thank you.
@@ -702,4 +712,5 @@
     </footer>
 
 </body>
+<script src="scriptportfolio.js"></script>
 </html>
