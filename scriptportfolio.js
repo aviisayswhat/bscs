@@ -10,7 +10,7 @@ if (magicBtn && profileAvatar) {
 
         setTimeout(function() {
             if (profileAvatar.src.includes('gacha.png')) {
-                profileAvatar.src = 'me.PNG';
+                profileAvatar.src = 'me.png';
                 profileAvatar.style.objectPosition = '10px 0.5px'; 
                 profileAvatar.style.transform = 'scale(1.30)';
             } else {
